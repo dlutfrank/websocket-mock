@@ -14,6 +14,8 @@ module.exports =  {
 	dataDir: '',
 	// websocket 服务端口
 	socket: 9096,
-	// websocket 假数据文件目录相对路径(相对于node命令的执行路径)
+	// [必须] websocket 假数据文件目录相对路径(相对于node命令的执行路径)
 	pushDir: '',
+	//服务器启动模式，0 -> http, 1 -> socket, 2 -> both， 默认为http
+	mode: 0
 }

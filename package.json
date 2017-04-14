@@ -4,7 +4,6 @@
   "description": "假数据服务器",
   "main": "src/server",
   "bin": {
-    "esky-mock": "./src/bin/esky-mock.js",
     "ws-mock": "./src/bin/ws-mock.js"
 },
   "keywords": [
@@ -26,8 +25,7 @@
   },
   "scripts": {
     "init": "npm install -s --registry=https://registry.npm.taobao.org",
-    "test": "node src/bin/esky-mock -p 3000 -c test/conf.js",
-    "test-ws": "node src/bin/ws-mock -c test/conf.js"
+    "test": "node src/bin/ws-mock -p 3000 -c test/conf.js"
   },
   "homepage": "https://github.com/dlutfrank/websocket-mock",
   "repository": {

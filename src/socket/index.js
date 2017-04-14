@@ -25,7 +25,7 @@ module.exports = function(conf) {
     // 配置文件缓存
     global.__mockConf = conf;
     // 数据文件完整路径
-    global.__mockDataDir = path.resolve(conf.pushDir);
+    global.__mockPushDir = path.resolve(conf.pushDir);
     //route(app);
     app.use(bodyParser.json()); // for parsing application/json
     app.use(bodyParser.urlencoded({extended: true})); // for parsing application/x-www-form-urlencoded
