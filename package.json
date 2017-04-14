@@ -4,11 +4,13 @@
   "description": "假数据服务器",
   "main": "src/server",
   "bin": {
-    "esky-mock": "./src/bin/esky-mock.js"
-  },
+    "esky-mock": "./src/bin/esky-mock.js",
+    "ws-mock": "./src/bin/ws-mock.js"
+},
   "keywords": [
     "esky",
-    "mock"
+    "mock",
+    "websocket"
   ],
   "author": "esky",
   "license": "MIT",
@@ -19,16 +21,18 @@
     "cookie-parser": "1.4.3",
     "express": "4.14.0",
     "mockjs": "1.0.0",
-    "multer": "1.3.0"
+    "multer": "1.3.0",
+    "ws": "^2.2.3"
   },
   "scripts": {
     "init": "npm install -s --registry=https://registry.npm.taobao.org",
-    "test": "node src/bin/esky-mock -p 3000 -c test/conf.js"
+    "test": "node src/bin/esky-mock -p 3000 -c test/conf.js",
+    "test-ws": "node src/bin/ws-mock -c test/conf.js"
   },
-  "homepage": "https://github.com/esky/esky-mock",
+  "homepage": "https://github.com/dlutfrank/websocket-mock",
   "repository": {
     "type": "git",
-    "url": "https://github.com/esky/esky-mock.git"
+    "url": "https://github.com/dlutfrank/websocket-mock.git"
   },
   "engines": {
     "node": ">=4.00"

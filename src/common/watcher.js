@@ -10,10 +10,9 @@ function clearCache(mod){
 	});
 }
 module.exports = {
-	start: function() {
-		let dataDir = global.__mockDataDir;
+	start: function(dir) {
 		if(!watcher){
-			watcher = chokidar.watch(dataDir, {
+			watcher = chokidar.watch(dir, {
 				persistent: true
 			});
 		}
@@ -24,12 +23,12 @@ module.exports = {
 			watcher.on('change', (path, stats) => {
 				console.log(`【更新】${path}！`);
 				// delete require.cache[require.resolve(path)];
-				clearCache(require.cache[require.resolve(dataDir)]);
+				clearCache(require.cache[require.resolve(dir)]);
 			});
 			watcher.on('add', (path, stats) => {
 				console.log(`【新增】${path}`);
 				// delete require.cache[require.resolve(path)];
-				clearCache(require.cache[require.resolve(dataDir)]);
+				clearCache(require.cache[require.resolve(dir)]);
 			});
 		});
 

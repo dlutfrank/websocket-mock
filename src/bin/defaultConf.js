@@ -11,5 +11,9 @@ module.exports =  {
 	// 服务端口，配合webpack的代理使用
 	port: 3334,
 	// 【必须】假数据文件目录相对路径(相对于node命令的执行路径)
-	dataDir: ''
+	dataDir: '',
+	// websocket 服务端口
+	socket: 9096,
+	// websocket 假数据文件目录相对路径(相对于node命令的执行路径)
+	pushDir: '',
 }

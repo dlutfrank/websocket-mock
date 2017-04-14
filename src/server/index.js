@@ -5,7 +5,7 @@
 'use strict'
 let express = require('express');
 let app = express();
-let watcher = require('./watcher');
+let watcher = require('../common/watcher');
 let path = require('path');
 let route = require('./route')
 let basePathReg;
@@ -28,6 +28,6 @@ module.exports = function(conf){
 		let host = server.address().address;
 		let port = server.address().port;
 		console.log('Mock服务启动（http://%s:%s）', host, port);
-		watcher.start()
+		watcher.start(conf.dataDir)
 	});
 }
