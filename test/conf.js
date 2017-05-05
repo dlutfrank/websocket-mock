@@ -6,8 +6,10 @@ module.exports = {
     // 服务端口，配合webpack的代理使用
     port: 3330,
     // 【必须】假数据文件目录相对路径(相对于node命令的执行路径)
-	socket: 9096,
+    socket: 9096,
+    //服务器推送频率
+    interval: 1000,
     dataDir: 'test/data',
     pushDir: 'test/socket',
-	mode: 2
+    mode: 2
 }

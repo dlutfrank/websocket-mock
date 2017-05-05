@@ -17,5 +17,7 @@ module.exports =  {
 	// [必须] websocket 假数据文件目录相对路径(相对于node命令的执行路径)
 	pushDir: '',
 	//服务器启动模式，0 -> http, 1 -> socket, 2 -> both， 默认为http
-	mode: 0
+	mode: 0,
+	//服务器推送间隔
+	interval:1000
 }
